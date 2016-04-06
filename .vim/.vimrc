@@ -1,7 +1,6 @@
-set nocompatible
-
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Set up runtimepath when using -u /path/to/vimrc to not use the default
-" ~/.vim folder
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " set default 'runtimepath' (without ~/.vim folders)
 let &runtimepath = printf('%s/vimfiles,%s,%s/vimfiles/after', $VIM, $VIMRUNTIME, $VIM)
 
@@ -10,9 +9,13 @@ let s:portable = expand('<sfile>:p:h')
 " add the directory to 'runtimepath'
 let &runtimepath = printf('%s,%s,%s/after', s:portable, &runtimepath, s:portable)
 
+
+"""""""""""""""
+" Sane defaults
+"""""""""""""""
+set nocompatible
 set backspace=eol,start,indent
 
-" no back up/swp files
 set nobackup
 set noswapfile
 set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp   " store swap files here
@@ -30,14 +33,23 @@ set smarttab      " Insert appropriate spaces in front of line according to shif
 set autoindent
 set smartindent
 
+set hlsearch
+
 set autowrite
+set hidden
 
 set number
 colorscheme elflord
 
-":hi Search ctermfg=0 ctermbg=6 
-set hlsearch
 
-
+""""""""""""""""
+" Bare mappings 
+""""""""""""""""
 let mapleader = "\<space>"
 nnoremap <leader>v :e .vim/.vimrc<CR>
+
+" No crutches
+nnoremap <left>  <nop>
+nnoremap <right> <nop>
+nnoremap <up>    <nop>
+nnoremap <down>  <nop>

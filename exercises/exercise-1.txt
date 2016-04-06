@@ -1,0 +1,46 @@
+##################
+# Basic movement #
+##################
+
+# w/e/b/ge
+These are all small words.
+
+# W/E/B/gE
+"Big" words are words.like.this() (Think chained functions, or jumping over punctuation)
+
+# 0/^/$
+beginning of the line / end of the line
+    what about white space?
+
+# f/F/t/T
+move forward to the letter you want with f
+move backward to the letter you want with F
+move up until some character with t
+move back until some character with T
+
+# {  }
+navigate bodies of text
+or "paragraphs" with ease
+with either { or }
+
+# (  )
+You can navigate sentences too. Try ( or ). I've found this is much less helpful in code, however.
+
+#########
+# Verbs #
+#########
+
+# v, V
+
+# y, yy
+
+# d, dd, D
+
+# c, cc, C
+
+
+# Text Objects
+
+
+
+
