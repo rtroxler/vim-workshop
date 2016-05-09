@@ -10,6 +10,9 @@ let s:portable = expand('<sfile>:p:h')
 let &runtimepath = printf('%s,%s,%s/after', s:portable, &runtimepath, s:portable)
 
 
+
+
+
 """""""""""""""
 " Sane defaults
 """""""""""""""
@@ -18,7 +21,6 @@ set backspace=eol,start,indent
 
 set nobackup
 set noswapfile
-set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp   " store swap files here
 
 syntax on
 filetype plugin indent on
@@ -39,11 +41,25 @@ set autowrite
 set hidden
 
 set number
-colorscheme elflord
+
+if &background =~ 'dark'
+  colorscheme elflord
+else
+  colorscheme default
+endif
+
+
+"""""""""""""""
+" Cursor things
+"""""""""""""""
+" solid underscore
+let &t_SI .= "\<Esc>[4 q"
+" blinking block
+let &t_EI .= "\<Esc>[1 q"
 
 
 """"""""""""""""
-" Bare mappings 
+" Bare mappings
 """"""""""""""""
 let mapleader = "\<space>"
 nnoremap <leader>v :e .vim/.vimrc<CR>

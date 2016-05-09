@@ -1,6 +1,7 @@
-##################
-# Basic movement #
-##################
+
+################################################
+################ Basic movement ################
+################################################
 
 # w/e/b/ge
 These are all small words.
@@ -11,6 +12,14 @@ These are all small words.
 # 0/^/$
 beginning of the line / end of the line
     what about white space?
+
+# gg / G
+jump to the beginning of the file with gg
+jump to the end of the file with G
+
+# C-o / C-i
+move back in the jumplist with Ctrl-o
+move forward in the jumplist with Ctrl-i
 
 # f/F/t/T
 move forward to the letter you want with f
@@ -24,22 +33,67 @@ or "paragraphs" with ease
 with either { or }
 
 # (  )
-You can navigate sentences too. Try ( or ). I've found this is much less helpful in code, however.
+You can navigate sentences too. Try ( or ). I've found this is much less helpful in code however.
 
-#########
-# Verbs #
-#########
 
-# v, V
+
+################################################
+################ Insert mode ###################
+################################################
+
+# i, I
+Use i to insert to the left of the cursor.
+Use I to insert at the beginning of the line.
+
+# a, A
+Use a to insert to the right of the cursor.
+Use A to insert at the end of the line.
+
+
+# o, O
+lower case `o` will create a new line under the current line and put you into insert mode.
+upper case 'O' will create a new line above the current line and enter insert mode.
+
+
+
+################################################
+################### Verbs ######################
+################################################
 
 # y, yy
+"Yank" text with `y`. Most widely known for the `yy` command to copy the current line.
+
+# p, P
+Paste text with `p`.
 
 # d, dd, D
+Delete text with d. `d` by itself requires a motion (or text object), but you can `dd` to delete a line, or `D` to delete to the end of the line.
+
+Delete this line
+Delete this word -> elephant
+Delete everything after this sentence. Wait, no don't delete me- OH GOD WHY
+
+
+---- The three commands above can take a register to "save" the text into. -----
+Access registers with the " command, followed by the register you want to use.
+
+ex: "kdd will delete the current line and put it into register k.
+    "kp will paste from that register.
+
+# v, V
+Enter visual mode to select text using `v`.
+
+You can also select
+lines of text with `V`
 
 # c, cc, C
+The change verb. Is equivalent to delete followed by insert, but does it in one motion (which is very important)
 
 
-# Text Objects
+
+################
+# Text Objects #
+################
 
 
 
