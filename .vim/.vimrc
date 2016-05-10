@@ -51,8 +51,7 @@ set ttimeoutlen=250
 set notimeout
 
 if &background =~ 'dark'
-  colorscheme elflord
-  hi Visual ctermfg=0
+  colorscheme ron
 else
   colorscheme default
   hi Visual ctermfg=0
@@ -73,9 +72,11 @@ let &t_EI .= "\<Esc>[1 q"
 """"""""""""""""
 let mapleader = "\<space>"
 nnoremap <leader>v :e .vim/.vimrc<CR>
+nnoremap <leader>r :!ruby %<CR>
 
 " No crutches
 nnoremap <left>  <nop>
 nnoremap <right> <nop>
 nnoremap <up>    <nop>
 nnoremap <down>  <nop>
+
