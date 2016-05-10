@@ -42,10 +42,20 @@ set hidden
 
 set number
 
+set ttyfast
+set lazyredraw
+
+set noesckeys
+set ttimeout
+set ttimeoutlen=250
+set notimeout
+
 if &background =~ 'dark'
   colorscheme elflord
+  hi Visual ctermfg=0
 else
   colorscheme default
+  hi Visual ctermfg=0
 endif
 
 

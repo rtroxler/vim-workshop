@@ -1,4 +1,3 @@
-
 ################################################
 ################ Basic movement ################
 ################################################
@@ -67,12 +66,7 @@ upper case 'O' will create a new line above the current line and enter insert mo
 Paste text with `p`.
 
 # d, dd, D
-Delete text with d. `d` by itself requires a motion (or text object), but you can `dd` to delete a line, or `D` to delete to the end of the line.
-
-Delete this line
-Delete this word -> elephant
-Delete everything after this sentence. Wait, no don't delete me- OH GOD WHY
-
+Delete text with d. `d` by itself requires a movement (or text object), but you can `dd` to delete a line, or `D` to delete to the end of the line.
 
 ---- The three commands above can take a register to "save" the text into. -----
 Access registers with the " command, followed by the register you want to use.
@@ -91,10 +85,77 @@ The change verb. Is equivalent to delete followed by insert, but does it in one 
 
 
 
-################
-# Text Objects #
-################
+#######################################################
+# Text Objects (and other fun ways to chain commands) #
+#######################################################
 
+All commands above can be prepended with a count
 
+# 3dd
+  delete
+  delete
+  delete
 
+# 2p
 
+# 5ihi<esc>
+
+They can also be followed up by a movement
+
+# ctC
+PostsController <- rename to Users
+
+# dt)
+def i_only_take_one_arg(arg1, arg2)
+
+# dw
+Delete just the first word.
+
+# 2dw
+Delete two words
+
+# c}
+Change
+this paragraph
+to gibberish
+
+# i and a
+
+# iw / aw
+Visually select this little word with viw
+
+Delete around a word (including white space) with daw
+
+# iW / aW
+This is a Big.word
+
+# i" / a"
+let string = "Change me."
+string2 = 'I work too.'
+
+# i( / a(
+def function_with_some_args(args1, args2, args3)
+
+# i{ 
+function() {
+  let badcode = ...
+  we_really_oughta_rewrite_all_this;
+}
+
+# ip / ap
+
+def function_b
+  some_func()
+end
+
+def function_a
+  some_other_func()
+end
+
+# i] / a[
+some_array[i + 2]
+
+# i> / it
+You can even manipulate html <strong> tags! </strong>
+
+You can also define new text objects because Vim is awesome (but you need a plugin for it).
