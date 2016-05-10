@@ -7,4 +7,4 @@ def rev s
 end
 
 result = rev("hello") == "olleh" 
-puts "#{result} -- #{result ? "SUCCESS!" : "fail."}"
+p "#{result} -- #{result ? "SUCCESS!" : "fail."}"
