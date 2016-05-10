@@ -34,6 +34,10 @@ with either { or }
 # (  )
 You can navigate sentences too. Try ( or ). I've found this is much less helpful in code however.
 
+# /
+Use / to start a forward search, ? to start a backward search
+n will take you to the next occurence, N to the previous
+
 
 
 ################################################
